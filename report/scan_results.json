@@ -1,0 +1,120 @@
+{
+ "tool": "decontam_scan",
+ "version": "1.0",
+ "method": "normalized word n-gram Jaccard near-duplicate scan with exact prefix-filter inverted-index candidate generation (see README)",
+ "thresholds": [
+  1.0,
+  0.8,
+  0.6
+ ],
+ "comparisons": [
+  {
+   "name": "pool_passages_vs_train",
+   "note": "competition train.csv passages (official)",
+   "query_file": "data/pool_passages.csv.gz",
+   "reference_file": "data/train.csv",
+   "shingle_n_words": 5,
+   "query_rows": 231036,
+   "reference_rows": 2699,
+   "counts_by_threshold": {
+    "1": {
+     "pairs": 0,
+     "distinct_query_rows": 0,
+     "distinct_reference_rows": 0
+    },
+    "0.8": {
+     "pairs": 0,
+     "distinct_query_rows": 0,
+     "distinct_reference_rows": 0
+    },
+    "0.6": {
+     "pairs": 0,
+     "distinct_query_rows": 0,
+     "distinct_reference_rows": 0
+    }
+   },
+   "pairs": []
+  },
+  {
+   "name": "pool_passages_vs_test_public_examples",
+   "note": "test.csv as published publicly: example rows only; hidden test not public",
+   "query_file": "data/pool_passages.csv.gz",
+   "reference_file": "data/test_public_examples.csv",
+   "shingle_n_words": 5,
+   "query_rows": 231036,
+   "reference_rows": 3,
+   "counts_by_threshold": {
+    "1": {
+     "pairs": 0,
+     "distinct_query_rows": 0,
+     "distinct_reference_rows": 0
+    },
+    "0.8": {
+     "pairs": 0,
+     "distinct_query_rows": 0,
+     "distinct_reference_rows": 0
+    },
+    "0.6": {
+     "pairs": 0,
+     "distinct_query_rows": 0,
+     "distinct_reference_rows": 0
+    }
+   },
+   "pairs": []
+  },
+  {
+   "name": "pool_prompts_vs_train_prompts_reconstructed",
+   "note": "community-reconstructed train prompt texts (official prompt text is not public)",
+   "query_file": "data/pool_prompts.csv.gz",
+   "reference_file": "data/train_prompts_reconstructed.csv",
+   "shingle_n_words": 3,
+   "query_rows": 17671,
+   "reference_rows": 150,
+   "counts_by_threshold": {
+    "1": {
+     "pairs": 0,
+     "distinct_query_rows": 0,
+     "distinct_reference_rows": 0
+    },
+    "0.8": {
+     "pairs": 0,
+     "distinct_query_rows": 0,
+     "distinct_reference_rows": 0
+    },
+    "0.6": {
+     "pairs": 0,
+     "distinct_query_rows": 0,
+     "distinct_reference_rows": 0
+    }
+   },
+   "pairs": []
+  },
+  {
+   "name": "train_vs_test_public_examples",
+   "note": "sanity check between the two competition files themselves",
+   "query_file": "data/train.csv",
+   "reference_file": "data/test_public_examples.csv",
+   "shingle_n_words": 5,
+   "query_rows": 2699,
+   "reference_rows": 3,
+   "counts_by_threshold": {
+    "1": {
+     "pairs": 0,
+     "distinct_query_rows": 0,
+     "distinct_reference_rows": 0
+    },
+    "0.8": {
+     "pairs": 0,
+     "distinct_query_rows": 0,
+     "distinct_reference_rows": 0
+    },
+    "0.6": {
+     "pairs": 0,
+     "distinct_query_rows": 0,
+     "distinct_reference_rows": 0
+    }
+   },
+   "pairs": []
+  }
+ ]
+}
